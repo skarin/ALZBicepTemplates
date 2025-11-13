@@ -1,0 +1,62 @@
+# Azure Landing Zone - .gitignore
+
+# Bicep build artifacts
+temp/
+*.json
+!parameters/*.json
+!policies/**/*.json
+
+# Deployment outputs
+outputs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sensitive information
+*.key
+*.pem
+*.pfx
+*.p12
+secrets/
+.env
+.env.local
+
+# Customer-specific data (if needed)
+# Uncomment if you don't want to commit customer parameter files
+# parameters/customer*.bicepparam
+
+# Azure credentials
+.azure/
+
+# PowerShell modules
+PSModules/
+
+# Test results
+TestResults/
+*.trx
+
+# Backup files
+*.bak
+*.backup
+
+# Terraform state (if mixing IaC tools)
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Documentation builds
+_site/
+.docfx/
+
+# Temporary files
+tmp/
